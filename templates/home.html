@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Pagina de Incio{% endblock title %}
+
+{% block content %} 
+    <div id= "carouseli" class= " carousel slide " data-ride="carousel">
+        <p class="alert alert-secondary font-weight-bold text-center text-uppercase ">
+            ArduRobotica
+        </p>
+        <div class= "carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://www.monederosmart.com/wp-content/uploads/2020/03/harrison-broadbent-fZB51omnY_Y-unsplash-scaled.jpg" alt="" width="1500" height="500">
+            </div>
+            <div class="carousel-item">
+                <img src="https://eloutput.com/app/uploads-eloutput.com/2020/06/LEGO-Mindstorms-Kit.jpg" alt="" width="1500" height="500">
+            </div>
+
+        </div>
+        <a class="carousel-control-prev" href="#carouseli " role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden = "true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouseli " role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden = "true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+        <ol class="carousel-indicators">
+            <li data-target= " #carouseli" data-slide-to="0" class="active"></li>
+            <li data-target= " #carouseli" data-slide-to="1"></li>
+
+        </ol>
+    </div>
+    
+    <h2>¿Que es ArduRobotica?</h2>
+    <p>Somos una empresa  enfocada en el servicio y asesoría de Robótica y a Bajo Costo. Buscamos siempre estar a la vanguardia de lo último en tecnología y prototipos electrónicos que puedan servir para desarrollar la creatividad y aprendizaje de los estudiantes.</p>
+    <p>Contamos con una amplia gama de Microcontroladores, módulos, sensores, herramientas, Impresoras 3D y kits de robótica, haciendo que nuestro servicio sea personalizado y se adecue a las necesidades de cada uno de nuestros clientes.</p>
+    <p>Nuestros productos pretenden facilitar el desarrollo de prototipos y soluciones especializadas disminuyendo las barreras que presentan el uso de nuevas tecnologías, de manera tal, que nuestros clientes puedan comenzar con bloques que ya han sido probados y que cuentan con ejemplos de uso que los guiarán para conseguir su objetivo en forma rápida y efectiva.</p>
+
+    <h2>Nosotros</h2>
+
+        <div class="row">
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+            <div class="card h-100">
+            <div class="card-body">
+                <h4 class="card-title">
+                <a>¿Que queremos?</a>
+                </h4>
+                <p class="card-text">Queremos ser líderes en nuestro campo ofreciendo permanentemente productos novedosos y atractivos, sin dejar de lado la calidad tanto en la atención a nuestros clientes como en el diseño y fabricación de nuestros dispositivos. Nuestro servicio deberá destacar por responder oportunamente, disponer de stock, generar un fácil acceso a nuestros productos y reducir al máximo los plazos de entrega.</p>
+                <a href="#"><img class="card-img-bottom" src="https://ticstrava.files.wordpress.com/2019/03/quienes_somos.jpg" alt=""></a>
+            </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+            <div class="card h-100">            
+            <div class="card-body">
+                <h4 class="card-title">
+                <a>¿Quienes somos?</a>
+                </h4>
+                <p class="card-text">ArduRobotica somos especialistas en acercar al público soluciones y experiencias en torno a la robótica. Este acercamiento a la sociedad, en clave de sencillez y facilidad de uso de todos nuestros productos, resulta en una red de contactos formada por líderes de opinión y grupos de interés del sector de la robótica y la educación.</p>
+                <a href="#"><img class="card-img-bottom" src="https://ardurobotica.com.br/wp-content/uploads/2019/02/Placa-Compat%C3%ADvel-Arduino-Uno-R3-Smd-Ch340-2.jpg" alt=""></a>
+            </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+            <div class="card h-100">
+            <div class="card-body">
+                <h4 class="card-title">
+                <a>Nuestro Publico</a>
+                </h4>
+                <p class="card-text">Estamos dirigidos al publico en general, sean tanto gente mayor como joven queremos que empiezen a desorrallor sus capacidades creativas en este ambiente</p>
+                <p>Por lo tanto siemrpe brindamos la mejor experiencia en su servicio de antencion</p>
+                <a href="#"><img class="card-img-bottom" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTSbBujNzXtgjCWoD_ChowKd2Nt_WWn-7nIGw&usqp=CAU" alt=""></a>
+            </div>
+            </div>
+        </div>
+    </div>
+<footer>
+    <div class="redes">
+        <p class="alert alert-secondary font-weight-bold">
+            Puedes seguirnos en nuestras redes sociales, dando clic a las siguientes imagenes
+        </p>
+        <ul>
+            <li>
+                <a href="https://es-la.facebook.com/roboticayelectronica/"><img src="https://www.muypymes.com/wp-content/uploads/2018/03/facebook-itunesapple.jpg" alt="facebook" /></a>
+            </li>
+            <li>
+                <a href="https://twitter.com/todomicrostamp?lang=es"><img src="https://images.vexels.com/media/users/3/137419/isolated/preview/b1a3fab214230557053ed1c4bf17b46c-icono-de-twitter-logo-by-vexels.png" alt="twitter" /></a>
+            </li>
+            <li>
+               <a href="https://www.instagram.com/ardobot/?hl=es-la"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Black_Instagram_icon.svg/1200px-Black_Instagram_icon.svg.png" alt="instagram" /></a> 
+            </li>
+            <li>
+                <a href="https://youtu.be/ocg8s6iRDuw"><img src="data:image/png;base64,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" alt="youtube" /></a>
+            </li>
+            
+        </ul>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+{% endblock content %}

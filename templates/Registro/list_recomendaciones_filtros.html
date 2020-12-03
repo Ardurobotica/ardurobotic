@@ -1,0 +1,64 @@
+{% extends 'base.html' %} 
+ 
+{% block titulo_principal %}
+ 
+<div id=titulo_pagina>
+    Lista de Recomendaciones Registradas
+</div>
+{% endblock %} 
+
+
+
+
+{% block content %} 
+ 
+    <h3>Listado de Recomendaciones</h3>
+ 
+    <form class="form-inline mb-5" method="GET">
+        <div class="form-group mx-3">
+            <label class="mr-2">Buscar por nombre de producto:</label>
+            <input type="text" class="form-control mr-2" name="nombre-producto">            
+            <button class="btn btn-secondary" type="submit" name="btn-nombre-producto">Buscar</button>            
+        </div>  
+        
+
+        <div class="form-group mx-3">
+            <label class="mr-2">Buscar por nombre:</label>
+            <input type="text" class="form-control mr-2" name="nombre">            
+            <button class="btn btn-secondary" type="submit" name="btn-nombre">Buscar</button>            
+        </div>        
+ 
+    </form>
+
+<hr>
+<a class="btn" role="button" href="{% url 'add_recomendacion' %}">Agregar</a>
+<hr>
+
+
+{% if object_list %}
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <a>Tabla de Recomendaciones</a>
+        </tr>
+    </thead>
+    <tbody>
+        {% for recomendacion in object_list %}
+        <tr>
+            <th scope="row">{{ recomendacion.nombre }} </th>
+            <td>{{ recomendacion.email }}</td>
+            <td>{{ recomendacion.producto }}</td>
+            <td>{{ recomendacion.telefono }}</td>
+            <td>{{ recomendacion.razon }}</td>
+            {% if user.is_superuser %}
+            <td><a class="btn btn-primary" href="{% url 'edit_recomendacion' recomendacion.id %}">Editar</a></td>
+            <td><a class="btn btn-danger" href="{% url 'del_recomendacion' recomendacion.id %}">Eliminar</a></td>
+            {% endif %}
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+ 
+{% else %}
+    <h1>No hay productos</h1>
+{% endif %} {% endblock %}

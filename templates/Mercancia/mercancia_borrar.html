@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<body>
+
+<div class="container mb-3 mt-3">
+
+<form method="POST">{% csrf_token %}
+
+    <div>
+       
+    <h3>¿Desea eliminar la mercancia {{object.nombre}}?</h3><br>
+    <button class = "btn btn-danger" type="submit">Si</button>
+    <a class= "btn btn-secondary" href="{% url 'mercancia_list' %}">Cancelar</a> 
+    
+    </div>
+
+</form>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+</div>
+
+</body>
+
+{% endblock %}

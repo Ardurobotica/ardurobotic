@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+<h1 class="display-3">Mercancias</h1>
+<hr>
+<a class="btn" role="button" href="{% url 'mercancia_form' %}">Agregar</a>
+<hr>
+
+{% if not object_list %}
+<h1>No hay registro de mercancias</h1>
+<br><br><br><br><br><br><br><br>
+{% else %}
+<table class="table table-bordered">
+    <thead>
+         <tr>
+             <td>Fotografia</td>
+             <td>Nombre</td>
+             <td>Descripcion</td>
+             <td>Precio</td>
+         </tr>
+    </thead>
+    <tbody>  
+         {% for mercancia in object_list %}      
+         <tr>
+             <td><img src= ../../static/images/{{ mercancia.fotografia }} style="width: 100px;"/> </td>
+             <td>{{ mercancia.nombre }}</td>
+             <td>{{ mercancia.descripcion }}</td>
+             <td>{{ mercancia.precio }}</td>
+             <td>
+                 <a class="btn btn-primary" href="{% url 'mercancias_update' mercancia.id%}">Editar</a>
+                 <a class="btn btn-danger" href="{% url 'mercancias_borrar' mercancia.id%}">Eliminar</a>
+             </td>
+             
+         </tr>
+         {% endfor %}                                
+    </tbody>
+</table>
+{% endif %}
+
+</div>
+
+{% endblock %}

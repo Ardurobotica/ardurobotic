@@ -1,0 +1,54 @@
+{% extends 'base.html' %} 
+
+{% load static %}
+
+{% block title %}
+Registro
+{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/registro.css' %}" type="text/css">
+{% endblock %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+
+<div id="registro" class="container">
+    <h1 class="display">Login</h1><br>
+    <form method="POST" id="formulario">
+        {% csrf_token %}
+
+        <div class="form-group">
+            <label for="username">Nombre de Usuario</label><br>
+            <input name="username" class="form-control" type="text"/>
+            <div class="bg-danger mt-1">{{ form.errors.username }}</div>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label><br>
+            <input name="password" class="form-control" type="password"/>
+            <div class="bg-danger mt-1">{{ form.errors.password }}</div>
+        </div>
+
+        {% if form.non_field_errors %}
+        <div class="form-group">
+            <div class="bg-danger mt-1 p-2">Login incorrecto!</div>
+        </div>  
+        {% endif %}
+
+        {{form.non_field_errors}}
+        <div class="form-group">
+         <a href="{% url 'password_reset' %}">¿Olvidaste tu contraseña?</a><br><br>
+         <a href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}">Inicia Sesión Facebook</a><br><br>
+            <input class="rainbow rainbow-1" id="boton" type="submit" value="Enviar"/>
+        </div>
+        
+        
+        
+
+    </form>
+</div>
+{% endblock %}
+

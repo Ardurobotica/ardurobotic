@@ -1,0 +1,14 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+    <div class="text-center">
+        <form method="post">
+            {% csrf_token %}
+
+            <p class="delete-msg">¿Seguro que quieres eliminar el producto {{ object.producto }}?</p>
+
+            <a href="{% url 'mantenedor' %}" class="btn btn-secondary">NO</a>
+            <button class="btn btn-primary" type="submit" >Si</button>
+        </form>
+    </div>
+{% endblock %}

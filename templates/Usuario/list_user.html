@@ -1,0 +1,27 @@
+{% extends 'base.html' %} 
+
+{% block titulo_principal %} Listado de Usuarios {% endblock %}
+
+{% block content %}
+   {% if object_list %}
+        {% for user in object_list %}
+            <h1></h1>
+            <p>Usuario: {{ user.username }}</p>
+            <h1></h1>
+            <p>Nombre: {{ user.first_name }}</p>
+            <h1></h1>
+            <p>Apellido: {{ user.last_name }}</p>
+            <h1></h1>
+            <p>email: {{ user.email }}</p>
+            <h1>------------------------------------------------------------</h1>
+            <h1></h1>
+            <h1></h1>
+            
+        {% endfor %}
+            <a class="btn btn-outline-dark" href="{% url 'home' %}">VOLVER</a>     
+    {% else %}
+        <h1>No hay registros de user</h1>        
+        <a class="btn btn-outline-dark" href="{% url 'home' %}">VOLVER</a>        
+    {% endif %}
+
+{% endblock %}
